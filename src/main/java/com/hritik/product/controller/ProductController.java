@@ -35,11 +35,11 @@ public class ProductController {
             @RequestParam(required = false) String selectedItem) {
         Page<Product> productPage = productService.findPaginatedAndSearched(page, size, keyword);
         long totalResults = productService.countSearchResults(keyword);
-        String selectedColor = "#FFFFFF"; // Default color
+        String selectedColor = "#FFFFFF"; 
 
-        // Add selected color logic based on item
+
         if (selectedItem != null) {
-            selectedColor = "#FF5733"; // Set a custom color if an item is selected
+            selectedColor = "#FF5733"; 
         }
         int totalPages = productPage.getTotalPages();
 
