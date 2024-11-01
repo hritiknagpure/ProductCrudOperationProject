@@ -6,10 +6,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import com.hritik.product.model.Category;
 import com.hritik.product.service.CategoryService;
-
 
 
 @Controller
@@ -30,11 +28,9 @@ public class CategoryController {
             @RequestParam(required = false) String keyword,
             @RequestParam(required = false) String selectedItem) {
         Page<Category> productPage = categoryService.findPaginatedAndSearched(page, size, keyword);
-        String selectedColor = "#FFFFFF"; // Default color
-
-        // Add selected color logic based on item
+        String selectedColor = "#FFFFFF"; 
         if (selectedItem != null) {
-            selectedColor = "#FF5733"; // Set a custom color if an item is selected
+            selectedColor = "#FF5733"; 
         }
         int totalPages = productPage.getTotalPages();
 
