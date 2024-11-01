@@ -40,7 +40,7 @@ public class ProductService {
         if (optionalProduct.isPresent()) {
             Product product = optionalProduct.get();
             product.setName(name);
-//            product.setPrice(price);
+//      
             product.setCategory(category);
 
             if (!image.isEmpty()) {
@@ -86,7 +86,7 @@ public class ProductService {
     }
 
     public long countSearchResults(String keyword) {
-        // Count the total number of results for a given search keyword
+    
         return productRepository.searchByName(keyword, Pageable.unpaged()).getTotalElements();
     }
 
