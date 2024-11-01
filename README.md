@@ -18,8 +18,8 @@ This project is a **Spring Boot** application designed to manage a catalog of pr
 - **Data Management Efficiency:** The application’s design enables efficient product management and user-friendly interaction.
 
 ---
-## Demo Video
-(https://drive.google.com/file/d/1YCaA-F7PMtuMuag1UivLqIOaetOcJ0k5/view?usp=sharing)
+## Project Video
+(https://github.com/user-attachments/assets/a5bc10e9-99a6-4789-bf8b-de471f605d98)
 
 **technology**
 ## A) Use Spring boot
