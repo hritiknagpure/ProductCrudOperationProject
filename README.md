@@ -2,6 +2,9 @@
 
 This project is a **Spring Boot** application designed to manage a catalog of products such as plants, fertilizers, and seeds, organized by categories with complete **CRUD operations**. Built for ease of use and efficient data management, the application offers a user-friendly experience with features like **pagination**, **search functionality**, and **category navigation**.
 
+## 📹 Project Video
+[Watch the Project Video](https://github.com/user-attachments/assets/a5bc10e9-99a6-4789-bf8b-de471f605d98) 
+
 ---
 
 ## 🚀 Features
@@ -23,11 +26,6 @@ This project is a **Spring Boot** application designed to manage a catalog of pr
 ### 3. Intuitive User Interface
 - **Category Suggestions:** A category suggestion list allows users to browse products by type easily.
 - **Data Management Efficiency:** The application’s design enables efficient product management and user-friendly interaction.
-
----
-
-## 📹 Project Video
-[Watch the Project Video](https://github.com/user-attachments/assets/a5bc10e9-99a6-4789-bf8b-de471f605d98)
 
 ---
 
