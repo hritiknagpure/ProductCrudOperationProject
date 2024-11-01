@@ -1,0 +1,38 @@
+<head th:replace="~{commons/head :: head}"></head>
+
+<body>
+    <div th:replace="~{commons/header-nav::navbar}"></div>
+    <div th:replace="~{commons/side-bar::sidebar}"></div>
+    
+    <div class="container">
+        <div class="content">
+            <h1 th:text="${product.id != null} ? 'Update Product' : 'Add More Details of the Plants'"></h1>
+            <form th:action="${product.id != null} ? '/products/update/' + ${product.id} : '/products/save'"
+                  th:object="${product}" method="post" enctype="multipart/form-data">
+                <input type="hidden" th:field="*{id}" />
+                <div class="form-group">
+                    <label for="name">Plant Name</label>
+                    <input type="text" id="name" th:field="*{name}" required placeholder="Enter plant name" />
+                </div>
+                <div class="form-group">
+                    <label for="photo">Photo</label>
+                    <input type="file" name="image" accept="image/*" />
+                    <img th:if="${product.photo != null}" 
+                         th:src="@{/products/{id}/photo(id=${product.id})}" alt="Product Image"
+                         style="max-width: 100px; max-height: 100px;" />
+                </div>
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" th:field="*{category.id}" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option th:each="category : ${categories}" 
+                                th:value="${category.id}" 
+                                th:text="${category.name}">
+                        </option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Save</button>
+            </form>
+        </div>
+    </div>
+</body>
